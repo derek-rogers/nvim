@@ -5,11 +5,12 @@ local opts = {
     sources = {
         null_ls.builtins.formatting.gofmt,
         null_ls.builtins.formatting.goimports,
-        null_ls.builtins.formatting.eslint,
-        null_ls.builtins.formatting.prettierd,
+        -- null_ls.builtins.formatting.eslint,
+        null_ls.builtins.formatting.prettier,
         -- null_ls.builtins.formatting.prettier_d_slim,
         null_ls.builtins.formatting.cueimports,
         null_ls.builtins.formatting.cue_fmt,
+        null_ls.builtins.formatting.csharpier,
         -- null_ls.builtins.formatting.gofumpt,
         -- null_ls.builtins.formatting.goimports_reviser,
         -- null_ls.builtins.formatting.golines,
@@ -33,7 +34,7 @@ local opts = {
             "FormatModificationsDocumentFormattingGroup",
             { clear = false }
         )
-        vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+        vim.api.nvim_clear_autocmds({ group = augroup_id, buffer = bufnr })
         vim.api.nvim_create_autocmd(
             { "BufWritePre" },
             {

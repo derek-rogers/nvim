@@ -14,6 +14,12 @@ M.general = {
         ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
         ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
 
+        -- center screen when jumping
+        ["<C-d>"] = { "<C-d>zz"},
+        ["<C-u>"] = { "<C-u>zz"},
+        ["n"] = { "nzzzv"},
+        ["N"] = { "Nzzzv"},
+
         ["<C-t>"] = {
             function()
                 require("nvchad.tabufline").tabuflineNext()

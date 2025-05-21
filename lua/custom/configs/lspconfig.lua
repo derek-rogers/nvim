@@ -29,13 +29,26 @@ lspconfig.gopls.setup{
     }
 }
 
+lspconfig.csharp_ls.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
+
 -- lspconfig.emmet_language_server.setup({
 --     on_attach = on_attach,
 --     capabilities = capabilities,
 --     root_dir = lspconfig.util.root_pattern("package.json"),
 -- })
 
-lspconfig.tsserver.setup {
+-- lspconfig.tsserver.setup {
+--     disable_commands = false,
+--     on_attach = on_attach,
+--     capabilities = capabilities,
+--     -- filetypes = {"typescript", "typescriptreact", "typescript.tsx"},
+--     cmd = {"typescript-language-server", "--stdio"}
+-- }
+
+lspconfig.ts_ls.setup {
     disable_commands = false,
     on_attach = on_attach,
     capabilities = capabilities,
